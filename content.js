@@ -67,7 +67,46 @@
     ['好味', 'hou2 mei6'], ['天氣', 'tin1 hei3'], ['落雨', 'lok6 jyu5'], ['巴士', 'baa1 si2'], ['地鐵', 'dei6 tit3'],
     ['我哋', 'ngo5 dei6'], ['佢哋', 'keoi5 dei6'], ['你哋', 'nei5 dei6'], ['冇問題', 'mou5 man6 tai4'],
     ['唔緊要', 'm4 gan2 jiu3'], ['少少', 'siu2 siu2'], ['一齊', 'jat1 cai4'], ['學習', 'hok6 zaap6'],
-    ['練習', 'lin6 zaap6'], ['輸入法', 'syu1 jap6 faat3']
+    ['練習', 'lin6 zaap6'], ['輸入法', 'syu1 jap6 faat3'],
+    // v4 加：日常用語
+    ['早抖', 'zou2 dau2'], ['晚安', 'maan5 on1'], ['歡迎', 'fun1 jing4'], ['恭喜', 'gung1 hei2'],
+    ['新年快樂', 'san1 nin4 faai3 lok6'], ['生日快樂', 'saang1 jat6 faai3 lok6'], ['唔使客氣', 'm4 sai2 haak3 hei3'],
+    ['唔好意思', 'm4 hou2 ji3 si1'], ['冇事', 'mou5 si6'], ['得閒', 'dak1 haan4'], ['好耐', 'hou2 noi6'],
+    // 時間
+    ['等陣', 'dang2 zan6'], ['一陣間', 'jat1 zan6 gaan1'], ['頭先', 'tau4 sin1'], ['後日', 'hau6 jat6'],
+    ['星期一', 'sing1 kei4 jat1'], ['禮拜日', 'lai5 baai3 jat6'], ['上晝', 'soeng6 zau3'], ['下晝', 'haa6 zau3'],
+    ['夜晚', 'je6 maan5'], ['今晚', 'gam1 maan5'], ['鐘頭', 'zung1 tau4'], ['時間', 'si4 gaan3'],
+    // 地方
+    ['屋企', 'uk1 kei2'], ['學校', 'hok6 haau6'], ['公司', 'gung1 si1'], ['醫院', 'ji1 jyun2'], ['餐廳', 'caan1 teng1'],
+    ['超級市場', 'ciu1 kap1 si5 coeng4'], ['街市', 'gaai1 si5'], ['洗手間', 'sai2 sau2 gaan1'], ['廁所', 'ci3 so2'],
+    ['車站', 'ce1 zaam6'], ['機場', 'gei1 coeng4'], ['呢度', 'ni1 dou6'], ['嗰度', 'go2 dou6'],
+    ['中國', 'zung1 gwok3'], ['九龍', 'gau2 lung4'], ['新界', 'san1 gaai3'], ['銅鑼灣', 'tung4 lo4 waan1'],
+    ['旺角', 'wong6 gok3'], ['尖沙咀', 'zim1 saa1 zeoi2'], ['中環', 'zung1 waan4'], ['澳門', 'ou3 mun2'], ['廣州', 'gwong2 zau1'],
+    // 交通
+    ['的士', 'dik1 si2'], ['小巴', 'siu2 baa1'], ['電車', 'din6 ce1'], ['搭車', 'daap3 ce1'], ['上車', 'soeng5 ce1'], ['落車', 'lok6 ce1'],
+    // 生活動作
+    ['行街', 'haang4 gaai1'], ['睇戲', 'tai2 hei3'], ['瞓覺', 'fan3 gaau3'], ['起身', 'hei2 san1'], ['沖涼', 'cung1 loeng4'],
+    ['返學', 'faan1 hok6'], ['放學', 'fong3 hok6'], ['做嘢', 'zou6 je5'], ['傾偈', 'king1 gai2'], ['打電話', 'daa2 din6 waa2'],
+    ['買嘢', 'maai5 je5'], ['埋單', 'maai4 daan1'], ['幾錢', 'gei2 cin2'], ['幫手', 'bong1 sau2'], ['返屋企', 'faan1 uk1 kei2'],
+    ['識講', 'sik1 gong2'], ['飲水', 'jam2 seoi2'],
+    // 形容
+    ['好靚', 'hou2 leng3'], ['好食', 'hou2 sik6'], ['好攰', 'hou2 gui6'], ['好凍', 'hou2 dung3'], ['好熱', 'hou2 jit6'],
+    ['開心', 'hoi1 sam1'], ['明白', 'ming4 baak6'], ['慢慢', 'maan6 maan2'], ['快啲', 'faai3 di1'], ['多啲', 'do1 di1'], ['少啲', 'siu2 di1'],
+    // 連接詞、問句
+    ['可以', 'ho2 ji5'], ['應該', 'jing1 goi1'], ['一定', 'jat1 ding6'], ['或者', 'waak6 ze2'], ['因為', 'jan1 wai6'],
+    ['所以', 'so2 ji5'], ['但係', 'daan6 hai6'], ['如果', 'jyu4 gwo2'], ['然後', 'jin4 hau6'], ['已經', 'ji5 ging1'],
+    ['仲未', 'zung6 mei6'], ['呢個', 'ni1 go3'], ['嗰個', 'go2 go3'], ['邊個', 'bin1 go3'], ['幾時', 'gei2 si4'],
+    ['點樣', 'dim2 joeng2'], ['咁樣', 'gam2 joeng2'], ['多少', 'do1 siu2'], ['有冇', 'jau5 mou5'], ['唔係', 'm4 hai6'], ['係咪', 'hai6 mai6'],
+    // 人
+    ['爸爸', 'baa4 baa1'], ['媽媽', 'maa4 maa1'], ['哥哥', 'go4 go1'], ['家姐', 'gaa1 ze1'], ['細佬', 'sai3 lou2'], ['妹妹', 'mui4 mui2'],
+    ['老公', 'lou5 gung1'], ['老婆', 'lou5 po4'], ['仔女', 'zai2 neoi2'], ['同事', 'tung4 si6'], ['老闆', 'lou5 baan2'], ['醫生', 'ji1 sang1'],
+    // 食物
+    ['早餐', 'zou2 caan1'], ['午餐', 'ng5 caan1'], ['晚餐', 'maan5 caan1'], ['奶茶', 'naai5 caa4'], ['咖啡', 'gaa3 fe1'],
+    ['菠蘿包', 'bo1 lo4 baau1'], ['雞蛋', 'gai1 daan2'], ['白飯', 'baak6 faan6'], ['麵包', 'min6 baau1'], ['水果', 'seoi2 gwo2'],
+    ['蘋果', 'ping4 gwo2'], ['雪糕', 'syut3 gou1'], ['啤酒', 'be1 zau2'],
+    // 其他
+    ['電視', 'din6 si6'], ['問題', 'man6 tai4'], ['工作', 'gung1 zok3'], ['功課', 'gung1 fo3'], ['考試', 'haau2 si5'],
+    ['太陽', 'taai3 joeng4'], ['冷氣', 'laang5 hei3'], ['熱天', 'jit6 tin1']
   ];
   // 句子：由詞語組成 [[詞, 粵拼], ...]
   var SENTS = [
@@ -80,7 +119,46 @@
     [['唔該', 'm4 goi1'], ['你', 'nei5'], ['等', 'dang2'], ['我', 'ngo5']],
     [['冇問題', 'mou5 man6 tai4'], ['多謝', 'do1 ze6'], ['你', 'nei5']],
     [['佢哋', 'keoi5 dei6'], ['返工', 'faan1 gung1'], ['喇', 'laa3']],
-    [['點解', 'dim2 gaai2'], ['你', 'nei5'], ['唔', 'm4'], ['食飯', 'sik6 faan6']]
+    [['點解', 'dim2 gaai2'], ['你', 'nei5'], ['唔', 'm4'], ['食飯', 'sik6 faan6']],
+    // v4 加：日常句子
+    [['你', 'nei5'], ['食咗', 'sik6 zo2'], ['飯', 'faan6'], ['未', 'mei6']],
+    [['我', 'ngo5'], ['好', 'hou2'], ['肚餓', 'tou5 ngo6']],
+    [['呢個', 'ni1 go3'], ['幾錢', 'gei2 cin2']],
+    [['唔該', 'm4 goi1'], ['埋單', 'maai4 daan1']],
+    [['我', 'ngo5'], ['要', 'jiu3'], ['一杯', 'jat1 bui1'], ['奶茶', 'naai5 caa4']],
+    [['洗手間', 'sai2 sau2 gaan1'], ['喺', 'hai2'], ['邊度', 'bin1 dou6']],
+    [['我', 'ngo5'], ['而家', 'ji4 gaa1'], ['返屋企', 'faan1 uk1 kei2']],
+    [['聽日', 'ting1 jat6'], ['見', 'gin3']],
+    [['你', 'nei5'], ['得閒', 'dak1 haan4'], ['未', 'mei6']],
+    [['我哋', 'ngo5 dei6'], ['去', 'heoi3'], ['行街', 'haang4 gaai1'], ['啦', 'laa1']],
+    [['今日', 'gam1 jat6'], ['好', 'hou2'], ['熱', 'jit6']],
+    [['佢', 'keoi5'], ['係', 'hai6'], ['我', 'ngo5'], ['朋友', 'pang4 jau5']],
+    [['我', 'ngo5'], ['唔', 'm4'], ['明白', 'ming4 baak6']],
+    [['你', 'nei5'], ['講', 'gong2'], ['慢啲', 'maan6 di1'], ['得唔得', 'dak1 m4 dak1']],
+    [['等陣', 'dang2 zan6'], ['再', 'zoi3'], ['傾', 'king1']],
+    [['祝', 'zuk1'], ['你', 'nei5'], ['生日快樂', 'saang1 jat6 faai3 lok6']],
+    [['我', 'ngo5'], ['搭', 'daap3'], ['地鐵', 'dei6 tit3'], ['返工', 'faan1 gung1']],
+    [['你', 'nei5'], ['幾時', 'gei2 si4'], ['放工', 'fong3 gung1']],
+    [['我', 'ngo5'], ['已經', 'ji5 ging1'], ['食咗', 'sik6 zo2'], ['早餐', 'zou2 caan1']],
+    [['唔好意思', 'm4 hou2 ji3 si1'], ['我', 'ngo5'], ['遲到', 'ci4 dou3'], ['喇', 'laa3']],
+    [['冇問題', 'mou5 man6 tai4'], ['我', 'ngo5'], ['幫', 'bong1'], ['你', 'nei5']],
+    [['呢度', 'ni1 dou6'], ['唔可以', 'm4 ho2 ji5'], ['食煙', 'sik6 jin1']],
+    [['我', 'ngo5'], ['鍾意', 'zung1 ji3'], ['飲', 'jam2'], ['咖啡', 'gaa3 fe1']],
+    [['你', 'nei5'], ['識唔識', 'sik1 m4 sik1'], ['講', 'gong2'], ['廣東話', 'gwong2 dung1 waa2']],
+    [['佢', 'keoi5'], ['去咗', 'heoi3 zo2'], ['澳門', 'ou3 mun2']],
+    [['外面', 'ngoi6 min6'], ['落緊雨', 'lok6 gan2 jyu5']],
+    [['記得', 'gei3 dak1'], ['帶', 'daai3'], ['遮', 'ze1']],
+    [['早啲', 'zou2 di1'], ['瞓覺', 'fan3 gaau3'], ['啦', 'laa1']],
+    [['點樣', 'dim2 joeng2'], ['去', 'heoi3'], ['機場', 'gei1 coeng4']],
+    [['我哋', 'ngo5 dei6'], ['喺', 'hai2'], ['銅鑼灣', 'tung4 lo4 waan1'], ['等', 'dang2']],
+    [['今晚', 'gam1 maan5'], ['食', 'sik6'], ['乜嘢', 'mat1 je5']],
+    [['你', 'nei5'], ['屋企', 'uk1 kei2'], ['有', 'jau5'], ['幾多', 'gei2 do1'], ['人', 'jan4']],
+    [['多謝', 'do1 ze6'], ['你', 'nei5'], ['幫手', 'bong1 sau2']],
+    [['小心', 'siu2 sam1'], ['啲', 'di1']],
+    [['我', 'ngo5'], ['用', 'jung6'], ['粵拼', 'jyut6 ping3'], ['打字', 'daa2 zi6']],
+    [['你', 'nei5'], ['做緊', 'zou6 gan2'], ['乜嘢', 'mat1 je5']],
+    [['好耐', 'hou2 noi6'], ['冇見', 'mou5 gin3']],
+    [['一齊', 'jat1 cai4'], ['加油', 'gaa1 jau4']]
   ];
 
   // ---------- 拼音解析 ----------
@@ -231,11 +309,12 @@
     };
   }
   // 打詞語（聲調可打可唔打，空格可有可無）
-  function genTypeWord(rng) {
-    var w = util.pick(rng, WORDS), syl = w[1].split(' '), chars = w[0].split('');
+  function genTypeWord(rng) { return typeWordQ(util.pick(rng, WORDS)); }
+  function typeWordQ(w) {
+    var syl = w[1].split(' '), chars = w[0].split('');
     var withT = norm(w[1]), noT = stripTone(withT);
     return {
-      input: true,
+      input: true, word: w[0],
       prompt: '打出「' + w[0] + '」嘅粵拼（聲調可打可唔打）',
       visual: bigChar(w[0]), say: w[0],
       placeholder: '例如 neihou 或者 nei5hou2', answerText: w[1],
@@ -266,7 +345,7 @@
   function imeQ(text, jp, kind) {
     var chars = text.split(''), syl = jp.split(' ');
     return {
-      input: true, lang: 'zh-HK', unit: chars.length,
+      input: true, lang: 'zh-HK', unit: chars.length, word: text,
       prompt: '用你嘅粵拼輸入法，打出呢個' + kind + '（打完撳 Enter）',
       visual: '<div class="sent">' + text + '</div>' + hint(jp),
       say: text, placeholder: '喺度用輸入法打中文', answerText: text,
@@ -426,6 +505,19 @@
     labels: labels,
     levels: LEVELS,
     guide: GUIDE, guideTitle: '📱 輸入法教學', guideDesc: '電腦／手機點樣打粵拼',
+    timed: {
+      title: '⏱ 計時挑戰', desc: '60 秒內打得幾多個詞', seconds: 60,
+      modes: [
+        { id: 'jp', name: '打粵拼', desc: '睇詞語打粵拼（英文鍵盤，聲調可省）' },
+        { id: 'ime', name: '輸入法打中文', desc: '用你嘅粵拼輸入法打出詞語' }
+      ],
+      makeQ: function (mode, seed) {
+        var w = util.pick(util.mulberry(seed), WORDS);
+        var q = mode === 'ime' ? imeQ(w[0], w[1], '詞語') : typeWordQ(w);
+        if (mode !== 'ime') q.prompt = '打出粵拼（聲調可省）';
+        return q;
+      }
+    },
     makeQ: makeQ,
     _data: { CHARS: CHARS, WORDS: WORDS, SENTS: SENTS, parse: parse, diagSyl: diagSyl }
   };
