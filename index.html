@@ -94,12 +94,24 @@ code{background:rgba(127,127,127,.15);border-radius:4px;padding:1px 6px;font-siz
 .stars{color:#e0a52b;letter-spacing:2px}.bigstars{font-size:2.4rem;color:#e0a52b;letter-spacing:6px;margin:4px 0}
 .tile.locked{opacity:.5}
 .guide h3{margin-top:18px}.guide li{margin:4px 0}
+.dart{max-height:32vh;overflow-y:auto;font-size:1.35rem;line-height:2.1;letter-spacing:.06em;padding:8px 10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);margin-bottom:10px}
+.dart span.ok{color:var(--ok)}.dart span.sk{color:var(--mut)}.dart span.cur{background:var(--acc);color:#fff;border-radius:4px;padding:0 2px}
+.dpanel{text-align:center;padding:6px 0;border-radius:12px;transition:background .15s}.dpanel.bad{background:rgba(214,69,69,.18)}
+.dchar{font-size:clamp(48px,14vw,72px);line-height:1.2}
+.djp{font-family:ui-monospace,Consolas,monospace;font-size:2.2rem;letter-spacing:.12em;margin:2px 0 6px}
+.djp span{color:var(--mut)}.djp span.hit{color:var(--ok);font-weight:700}.djp span.need{color:var(--fg);border-bottom:3px solid var(--acc)}
+.bigkey{font-size:1.1rem;min-width:1.8em;color:var(--fg);border-color:var(--acc)}
+.din{width:100%;max-width:360px;font-size:1rem;padding:8px 12px;border:2px dashed var(--bd);border-radius:10px;background:var(--bg);color:var(--fg);text-align:center}
+.din:focus{border-color:var(--acc);outline:none}
+.dkb{display:flex;width:100%;align-items:center}.dkb .kbrow{justify-content:center}
+.key.dkey{cursor:pointer;padding:0;min-width:28px;height:36px;font-size:.95rem;color:var(--fg)}.key.dkey.on{color:#fff}
 </style>
 </head>
 <body>
 <div id="app"></div>
 <div id="toast"></div>
-<script src="content.js?v=6"></script>
-<script src="engine.js?v=6"></script>
+<script src="content.js?v=7"></script>
+<script src="drill.js?v=7"></script>
+<script src="engine.js?v=7"></script>
 </body>
 </html>

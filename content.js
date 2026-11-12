@@ -175,6 +175,82 @@
   function norm(s) { return String(s).toLowerCase().replace(/\s+/g, ''); }
   function stripTone(s) { return String(s).replace(/[0-9]/g, ''); }
 
+  // ---------- 跟打文章：字典、分詞、隨機文章 ----------
+  // 常用字（每字一個最常用讀音；多音字以詞語優先，唔啱可以喺跟打時「改讀音」，會記低）
+  var EXTRA = '的dik1 是si6 了liu5 在zoi6 有jau5 不bat1 這ze5 他taa1 她taa1 它taa1 們mun4 個go3 上soeng6 中zung1 和wo4 為wai4 ' +
+    '以ji5 會wui5 說syut3 就zau6 也jaa5 要jiu3 年nin4 生saang1 能nang4 而ji4 子zi2 那naa5 得dak1 於jyu1 着zoek6 下haa6 自zi6 ' +
+    '之zi1 後hau6 作zok3 裏leoi5 裡leoi5 用jung6 行hang4 所so2 然jin4 種zung2 事si6 成sing4 方fong1 經ging1 麼mo1 法faat3 如jyu4 ' +
+    '都dou1 同tung4 現jin6 當dong1 沒mut6 動dung6 面min6 起hei2 看hon3 定ding6 分fan1 還waan4 進zeon3 好hou2 小siu2 部bou6 其kei4 ' +
+    '些se1 主zyu2 樣joeng6 理lei5 本bun2 前cin4 但daan6 因jan1 只zi2 從cung4 實sat6 者ze2 意ji3 無mou4 力lik6 與jyu5 長coeng4 ' +
+    '把baa2 機gei1 民man4 第dai6 公gung1 此ci2 已ji5 工gung1 使sai2 情cing4 明ming4 性sing3 全cyun4 三saam1 又jau6 正zing3 業jip6 ' +
+    '將zoeng1 兩loeng5 間gaan1 由jau4 問man6 很han2 最zeoi3 重zung6 並bing6 物mat6 應jing1 向hoeng3 文man4 體tai2 美mei5 相soeng1 ' +
+    '見gin3 被bei6 利lei6 等dang2 或waak6 己gei2 身san1 果gwo2 加gaa1 話waa6 合hap6 回wui4 特dak6 代doi6 內noi6 信seon3 表biu2 ' +
+    '化faa3 給kap1 世sai3 位wai6 次ci3 度dou6 門mun4 任jam6 常soeng4 先sin1 海hoi2 通tung1 教gaau3 兒ji4 原jyun4 聲sing1 提tai4 ' +
+    '及kap6 比bei2 員jyun4 解gaai2 真zan1 處cyu3 走zau2 各gok3 幾gei2 認jing6 條tiu4 平ping4 氣hei3 題tai4 活wut6 更gang3 別bit6 ' +
+    '打daa2 變bin3 神san4 總zung2 何ho4 電din6 少siu2 報bou3 才coi4 結git3 反faan2 受sau6 目muk6 太taai3 再zoi3 感gam2 做zou6 ' +
+    '接zip3 必bit1 場coeng4 件gin6 計gai3 管gun2 期kei4 市si5 直zik6 德dak1 命ming6 指zi2 許heoi2 區keoi1 保bou2 至zi3 便bin6 ' +
+    '空hung1 決kyut3 展zin2 科fo1 司si1 非fei1 白baak6 界gaai3 達daat6 放fong3 強koeng4 像zoeng6 難naan4 思si1 王wong4 設cit3 ' +
+    '色sik1 路lou6 記gei3 品ban2 住zyu6 告gou3 求kau4 邊bin1 死sei2 該goi1 交gaau1 萬maan6 望mong6 覺gok3 共gung6 確kok3 師si1 ' +
+    '清cing1 讓joeng6 識sik1 帶daai3 運wan6 笑siu3 飛fei1 步bou6 改goi2 收sau1 言jin4 每mui5 車ce1 親can1 服fuk6 辦baan6 往wong5 ' +
+    '元jyun4 英jing1 近kan5 失sat1 轉zyun2 準zeon2 始ci2 怎zam2 未mei6 叫giu3 單daan1 影jing2 字zi6 流lau4 連lin4 深sam1 算syun3 ' +
+    '百baak3 價gaa3 城sing4 石sek6 級kap1 整zing2 離lei4 請ceng2 際zai3 示si6 病beng6 線sin3 似ci5 精zing1 滿mun5 消siu1 越jyut6 ' +
+    '容jung4 照ziu3 增zang1 功gung1 嗎maa3 包baau1 片pin3 史si2 查caa4 輕hing1 除ceoi4 找zaau2 顯hin2 阿aa3 李lei5 談taam4 吃hek3 ' +
+    '圖tou4 念nim6 引jan5 首sau2 專zyun1 號hou6 另ling6 注zyu3 語jyu5 青cing1 選syun2 響hoeng2 雖seoi1 參caam1 希hei1 古gu2 ' +
+    '房fong4 半bun3 節zit3 某mau5 案on3 態taai3 護wu6 孩haai4 夠gau3 音jam1 跟gan1 底dai2 例lai6 留lau4 終zung1 答daap3 緊gan2 ' +
+    '黃wong4 故gu3 河ho4 江gong1 客haak3 低dai1 友jau5 止zi2 千cin1 值zik6 男naam4 網mong5 助zo6 倒dou2 球kau4 怕paa3 苦fu2 ' +
+    '久gau2 錯co3 試si3 腦nou5 誰seoi4 陽joeng4 送sung3 驚ging1 傷soeng1 藥joek6 夜je6 初co1 喜hei2 歡fun1 冷laang5 停ting4 ' +
+    '遊jau4 龍lung4 室sat1 簡gaan2 靜zing6 衣ji1 您nei5 痛tung3 寶bou2 唱coeng3 歌go1 洗sai2 衫saam1 褲fu3 鞋haai4 窗coeng1 ' +
+    '枱toi2 櫈dang3 床cong4 燈dang1 雨jyu5 晴cing4 冬dung1 秋cau1 夏haa6 鐘zung1 錶biu1 筆bat1 紙zi2 玩waan2 跑paau2 跳tiu3 ' +
+    '飲jam2 喺hai2 咗zo2 嗰go2 呢ni1 啲di1 冇mou5 咁gam3 乜mat1 嘢je5 哋dei6 咪mai6 囉lo1 喎wo3 㗎gaa3 吖aa1 呀aa3 啦laa1 喇laa3 ' +
+    '嘛maa3 噉gam2 畀bei2 俾bei2 攞lo2 搵wan2 揾wan2 諗nam2 啱ngaam1 靚leng3 攰gui6 瞓fan3 傾king1 嬲nau1 返faan1 嚟lai4';
+  var CHAR_MAP = {}, WORD_MAP = {}, MAXW = 1;
+  EXTRA.replace(/(\S)([a-z]+[1-6])/g, function (_, c, jp) { CHAR_MAP[c] = jp; return ''; });
+  RAW.forEach(function (r) { CHAR_MAP[r[0]] = r[1]; });
+  function addWord(w, jp) {
+    if (w.length === 1) { CHAR_MAP[w] = jp; return; }
+    WORD_MAP[w] = jp; if (w.length > MAXW) MAXW = w.length;
+  }
+  SENTS.forEach(function (s) { s.forEach(function (t) { addWord(t[0], t[1]); }); });
+  WORDS.forEach(function (w) { addWord(w[0], w[1]); });
+  function isHan(c) { return /[㐀-鿿豈-﫿]/.test(c); }
+  // 文字 → [{c, jp}]；標點／英文／數字 → {c, skip:true}；唔識讀 → {c, jp:null}
+  // custom：用戶自己補／改嘅讀音（單字），優先過內置
+  function lookup(text, custom) {
+    custom = custom || {};
+    var chars = Array.from(String(text).replace(/\r/g, '')), out = [], i = 0;
+    while (i < chars.length) {
+      var c = chars[i];
+      if (!isHan(c)) { out.push({ c: c, skip: true }); i++; continue; }
+      var hit = 0;
+      if (!custom[c]) {
+        for (var L = Math.min(MAXW, chars.length - i); L >= 2 && !hit; L--) {
+          var w = chars.slice(i, i + L).join('');
+          if (WORD_MAP[w]) {
+            var sy = WORD_MAP[w].split(' ');
+            for (var j = 0; j < L; j++) out.push({ c: chars[i + j], jp: custom[chars[i + j]] || sy[j] });
+            hit = L;
+          }
+        }
+      }
+      if (hit) { i += hit; continue; }
+      out.push({ c: c, jp: custom[c] || CHAR_MAP[c] || null });
+      i++;
+    }
+    return out;
+  }
+  // 隨機文章：揀 n 句，兩句一組（，。）
+  function article(rng, n) {
+    var idx = util.shuffle(SENTS.map(function (_, i) { return i; }), rng).slice(0, Math.min(n, SENTS.length)), out = [];
+    idx.forEach(function (si, k) {
+      SENTS[si].forEach(function (t) {
+        var sy = t[1].split(' ');
+        t[0].split('').forEach(function (c, j) { out.push({ c: c, jp: sy[j] }); });
+      });
+      out.push({ c: (k % 2 === 0 && k < idx.length - 1) ? '，' : '。', skip: true });
+    });
+    return out;
+  }
+
   // ---------- 視覺 ----------
   function bigChar(c) { return '<div class="big">' + c + '</div>'; }
   function hint(jp) { return '<details class="hint"><summary>粵拼提示（唔識先睇）</summary><div class="jp">' + jp + '</div></details>'; }
@@ -519,7 +595,7 @@
       }
     },
     makeQ: makeQ,
-    _data: { CHARS: CHARS, WORDS: WORDS, SENTS: SENTS, parse: parse, diagSyl: diagSyl }
+    _data: { CHARS: CHARS, WORDS: WORDS, SENTS: SENTS, parse: parse, diagSyl: diagSyl, lookup: lookup, article: article, CHAR_MAP: CHAR_MAP }
   };
 
   if (typeof module !== 'undefined' && module.exports) module.exports = SITE;
